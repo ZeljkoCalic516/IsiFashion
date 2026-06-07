@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f5efe6;
+  --foreground: #2b2320;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-container px-5 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-burgundy px-6 py-3 text-sm font-medium uppercase tracking-wide text-sand-50 transition-colors hover:bg-burgundy-700;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-burgundy/40 px-6 py-3 text-sm font-medium uppercase tracking-wide text-burgundy transition-colors hover:bg-burgundy hover:text-sand-50;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-ink/15 bg-sand-50 px-3 py-1 text-xs font-medium text-ink/70;
+  }
+}
